@@ -317,6 +317,10 @@ public class OrderDataBean implements Serializable {
         setOrderStatus("cancelled");
     }
 
+    public boolean isPending() {
+        return isOpen() && !isCancelled();
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
